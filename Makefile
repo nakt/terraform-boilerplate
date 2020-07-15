@@ -2,6 +2,7 @@ AWS_VAULT_PROFILE := ""
 
 prep:
 	pre-commit install
+	pre-commit autoupdate
 
 init:
 	terraform init --upgrade
