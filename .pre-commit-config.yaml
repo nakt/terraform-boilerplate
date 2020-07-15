@@ -10,8 +10,14 @@ repos:
       args: [--allow-missing-credentials]
     - id: mixed-line-ending
 
+- repo: https://github.com/bridgecrewio/checkov.git
+  rev: master
+  hooks:
+    - id: checkov
+      files: \.tf$
+
 - repo: git://github.com/antonbabenko/pre-commit-terraform
-  rev: v1.31.0
+  rev: master
   hooks:
     - id: terraform_fmt
     - id: terraform_docs # terraform-docs is not working with Terraform 0.12 yet (read note in README)
